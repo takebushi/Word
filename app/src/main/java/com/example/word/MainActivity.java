@@ -2,6 +2,7 @@ package com.example.word;
 
 import android.graphics.Color;
 import android.graphics.LinearGradient;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         nameTextview.setText(apple.name);
 
+        Word apple = new Word(R.drawable.apple_icon,"リンゴ");
+
         nameTextview.setTextColor(Color.rgb(0,0,0));
 
         container.addView(nameTextview);
@@ -37,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView = new  ImageView(this);
 
-        imageView.setImageResource(apple.resId);
+        ImageView.setImageResource(apple.resId);
 
-        layout.addView(imageView);
+        layout.addView(ImageView);
         layout.addView(nameTextview);
 
         container.addView(layout);
